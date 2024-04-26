@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: red;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly; /* Alinea los elementos al inicio y al final */
+  align-items: center;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-items a {
+  color: white;
+  text-align: center;
+  padding: 12px 15px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 1px;
+}
+
+.menu-items a.active {
+  background-color: white;
+  color: red;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.menu-items a:hover {
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.social-search {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+    background-color: red;
+    padding: 5px 25px 5px 5px; /* Ajustamos el padding para dejar espacio para la imagen */
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+
+.search-bar img {
+  position: relative;
+  left: -40px; /* Ajustamos la posición de la imagen dentro del cuadro de búsqueda */
+  bottom: -8px;
+}
+
+.social a {
+  margin-left: 10px;
+}
+
+.bottom-nav {
+  font-size: 14px;
+  color: #337ab7;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bottom-nav button.menu-btn {
+  background-color: transparent;
+  color: #337ab7;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.bottom-nav button.menu-btn:hover {
+  background-color: #777;
+}
+
+.bottom-nav img {
+  width: 50px;
+  height: auto;
+}
+.image-text {
+  position: relative;
+  text-align: left;
+  color: white;
+  margin-top: 20px;
+}
+
+.image-text h3 {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  scale: 120%;
+  text-align: left;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 40%;
+  left: 0;  
+  right: 0;
+  text-align: center;
+}
+
+.buttons button {
+  background-color: black;
+  opacity: 50%;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  padding: 20px 30px; /* Aumentamos el padding para hacer los botones más grandes */
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons button img {
+  max-width: 100%; /* Asegura que la imagen dentro del botón se ajuste correctamente */
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="topnav">
+    <div class="menu-items">
+      <a class="active" href="#Personas">Personas</a>
+      <a href="#Empresas">Empresas</a>
+      <a href="#Organismos">Organismos</a>
+      <a href="#Sobre Sence">Sobre Sence</a>
+    </div>
+    <div class="social-search">
+      <div class="search-bar">
+        <input placeholder=" " type="text" value size="30">
+        <a><img src="img/search.png" style="height: 25px; width: 25px;"></a>
+      </div>
+      <div class="social">
+        <a href="#" title="Facebook" alt="fb"><img src="img/facebook.png" style="height: 25px; width: 25px;"></a>
+        <a href="#" title="Instagram" alt="ig"><img src="img/instagram.png"style="height: 25px; width: 25px;"></a>
+        <a href="#" title="YouTube" alt="yt"><img src="img/youtube.png"style="height: 25px; width: 25px;"></a>
+        <a href="#" title="Twitter" alt="tw"><img src="img/twitter.png"style="height: 25px; width: 25px;"></a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="bottom-nav">
+  <img src="img/sence.png" alt="Logo">
+  <div>
+    <button class="menu-btn">Login</button>
+    <button class="menu-btn">Necesito Ayuda</button>
+    <button class="menu-btn">Menu</button>
+  </div>
+</div>
+<div class="image-text">
+  <img src="img/fondo.jpg" alt="Fondo de bienvenida" style="width:100%;">
+  <h3>
+    Bienvenido,<br>
+    para apoyarte mejor<br>
+    elige una opción:
+  </h3>
+  <div class="buttons">
+    <button><img src="img/capacitacion.png" alt="Capacitación" style="width: 30px; margin-right: 10px;">Busco capacitación</button>
+    <button><img src="img/subsidio.png" alt="Subsidio" style="width: 30px; margin-right: 10px;">Busco Subsidio</button>
+    <button><img src="img/empleo.png" alt="Empleo" style="width: 30px; margin-right: 10px;">Busco empleo</button>
+    <button><img src="img/certificado.png" alt="Certificación" style="width: 30px; margin-right: 10px;">Certificar mi trabajo</button>
+  </div>
+</div>
+
+
+<div style="padding-left:16px">
+  <h2>Top Navigation Example</h2>
+  <p>Some content..</p>
+</div>
+</body>
+</html>

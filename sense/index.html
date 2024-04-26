@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/styles.css">
+
+</head>
+<body>
+<header>
+  <!-- Encabezado con barra de navegación -->
+  <div class="topnav">
+    <div class="menu-items">
+      <a class="active" href="#Personas">Personas</a><!-- Enlace a la sección de Personas -->
+      <a href="#Empresas">Empresas</a><!-- Enlace a la sección de Empresas -->
+      <a href="#Organismos">Organismos</a><!-- Enlace a la sección de Organismos -->
+      <a href="#Sobre Sence">Sobre Sence</a><!-- Enlace a la sección de Sence -->
+    </div>
+    <!-- Barra de búsqueda y enlaces sociales -->
+    <div class="social-search">
+      <div class="search-bar">
+        <input placeholder=" " type="text" value size="30">
+        <a><img src="img/search.png" style="height: 25px; width: 25px;"></a>
+      </div>
+      <div class="social">
+        <!-- Enlaces a redes sociales -->
+        <a href="https://www.facebook.com/sence.gob.cl/" title="Facebook" alt="fb" target="_blank"><img src="img/facebook.png" style="height: 25px; width: 25px;"></a>
+        <a href="https://www.instagram.com/sencechile/" title="Instagram" alt="ig" target="_blank"><img src="img/instagram.png"style="height: 25px; width: 25px;"></a>
+        <a href="https://www.youtube.com/channel/UCptJ968DYaiutjlTGIo0Jcg" title="YouTube" alt="yt" target="_blank"><img src="img/youtube.png"style="height: 25px; width: 25px;"></a>
+        <a href="https://twitter.com/SenceChile" title="Twitter" alt="tw" target="_blank"><img src="img/twitter.png"style="height: 25px; width: 25px;"></a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="bottom-nav">
+  <!-- Barra inferior de navegación -->
+  <img src="img/sence.png" alt="Logo"style="height: 12%; width: 12%">
+  <div>
+    <button class="menu-btn"><img src="img/ayuda.png" style="height: 56px; width: 190px"></button>
+    <button class="menu-btn"><img src="img/login.png" style="height: 56px; width: 124px"></button>
+    <button class="menu-btn"><img src="img/menu.png" ></button>
+  </div>
+</div>
+<!-- Sección de imagen y texto de bienvenida -->
+<div class="image-text">
+  <img src="img/fondo.jpg" alt="Fondo de bienvenida" style="width:100%;">
+  <h3>
+    Bienvenido,<br>
+    para apoyarte mejor<br>
+    elige una opción:
+  </h3>
+  <!-- Botones de opciones -->
+  <div class="buttons">
+    <ul class="horizontal-list">
+      <li><button><img src="img/capacitacion.png" alt="Capacitación" style="width: 50px; margin-right: 10px;"><br>Busco capacitación</button></li>
+      <li><button><img src="img/subisidio.png" alt="Subsidio" style="width: 50px; margin-right: 10px;"><br>Busco Subsidio</button></li>
+      <li><button><img src="img/empleo.png" alt="Empleo" style="width: 50px; margin-right: 10px;"><br>Busco empleo</button></li>
+      <li><button><img src="img/certificar.png" alt="Certificación" style="width: 50px; margin-right: 10px;"><br>Certificar mi trabajo</button></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Carrusel para las imagenes -->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <a href="https://sence.gob.cl/personas/formate-para-el-trabajo-sectorial-cuidados"><img src="img/carrusel1.png" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="https://sence.gob.cl/personas/construccion"><img src="img/carrusel2.png" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/carrusel3.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="img/carrusel4.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="img/carrusel5.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="img/carrusel6.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="img/carrusel7.png" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+<!-- Scritp para que avancen solos -->
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  <!-- Botones con enfasis para los accesos rapidos a sitios de interes -->
+  <div class="negrita-grande"><p><span class="texto-azul"><br> Accesos rápidos</span></p>
+  <div class="contenedor-enlaces">    
+    <button>
+      <a href="https://eligemejor.sence.cl/BuscarCursoNuevo/PorPrograma/Cursos%20en%20l%C3%ADnea" target="_blank"><img src="img/cursos_en_lnea.png" alt="Imagen 1" style="width: 100px;"></a>
+      <div class="texto-abajo">Cursos en linea</div>
+    </button>
+    <button>
+      <a href="https://sence.gob.cl/personas/subsidio-al-empleo-joven" target="_blank"><img src="img/subsidio_empleo_joven.png" alt="Imagen 2" style="width: 100px;"></a> 
+      <div class="texto-abajo">Subsidio Empleo<br> Joven</div>
+    </button>
+    <button>
+      <a href="https://eligemejor.sence.cl/BuscarCursoNuevo/PorPrograma" target="_blank"><img src="img/elige_mejor.png" alt="Imagen 2" style="width: 100px;">  </a>    
+      <div class="texto-abajo">Elige mejor</div>
+    </button>
+    <button>
+      <a href="https://sence.gob.cl/personas/orientacion-laboral" target="_blank"><img src="img/orientacicn_laboral.png" alt="Imagen 2" style="width: 100px;"></a>      
+      <div class="texto-abajo">Orientación laboral</div>
+    </button>
+    <button>
+      <a href="https://www.subsidioalempleo.cl/IFELaboral/index.html" target="_blank"><img src="img/ife_laboral.png" alt="Imagen 2" style="width: 100px;"></a>      
+      <div class="texto-abajo">IFE laboral</div>
+    </button>
+    <button>
+      <a href="https://sence.gob.cl/personas/ferias-laborales-sence" target="_blank"><img src="img/ferias_laborales_2.png" alt="Imagen 2" style="width: 100px;"></a>      
+      <div class="texto-abajo">Ferias Laborales</div>
+    </button>
+    <button>
+      <a href="https://sence.gob.cl/personas/bono-al-trabajo-de-la-mujer" target="_blank"><img src="img/bono_al_trabajo_mujer_0.png" alt="Imagen 2" style="width: 100px;"></a>      
+      <div class="texto-abajo">Bono al trabajo <br> mujer</div>
+    </button>
+  </div>
+  <!-- Cuadros de textos con estadisticas -->
+  <div class="negrita-grande"><p>
+    <span class="texto-negro">NÚMEROS DE VERDAD,</span>
+    <span class="texto-azul"> APOYO DE VERDAD</span>
+  </p>
+  <p class="texto-pequeno">Datos del último año</p>
+</div>
+</div>
+<div class="contenedor-cuadros">
+  <!-- Cuadro de texto 1 -->
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 681 mil</p></span>
+    <p class="texto-pequeno">Personas capacitadas</p>
+  </div>
+
+  <!-- Cuadro de texto 2 -->
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 96 mil</p></span>
+    <p class="texto-pequeno">Personas capacitadas on line</p>
+  </div>
+
+  <!-- Cuadro de texto 3 -->
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 773 mil</p></span>
+    <p class="texto-pequeno">Trabajadores subsidiados</p>
+  </div>
+
+  <!-- Cuadro de texto 4 -->
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 22 mil</p></span>
+    <p class="texto-pequeno">Personas orientadas laboralmente</p>
+  </div>
+</div>
+<!-- Imagenes con un boton dentro para redirigir al sitio -->
+<div class="contenedor-fondo" >
+  <div class="negrita-grande"><p><span class="texto-grande"><br> Iniciativas Busca Empleo</span></p>
+    <p class="texto-pequeno">Conoce todas las maneras que tenemos para ayudarte a buscar trabajo.</p>
+  </div>  
+  <div class="container-img-txt">
+    <div class="container">
+      <img src="img/FERIA LABORAL.png" alt="feria">
+      <button class="btn">VER MÁS</button>
+    </div>
+    <div class="container">
+      <img src="img/OFICINA MUNICIPAL.png" alt="oficina">
+      <button class="btn">VER MÁS</button>
+    </div>
+    <div class="container">
+      <img src="img/PLATAFORMA.png" alt="plataforma">
+      <button class="btn">VER MÁS</button>
+    </div>
+  </div>
+</div>
+<!-- videos con testimonios -->
+<div class="negrita-grande"><p><span class="texto-grande" style="color: #807e7e;">Se capacitaron y cambiaron sus vidas</span></p></div>
+<div class="negrita-grande"><p><span class="texto-pequeno" style="font-size: medium;">Conoce los testimonios de personas que participaron en nuestros cursos y se sumaron a los nuevos empleos.</span></p></div>
+<div class="contenedor-cuadros">
+<div class="testimonio"><!-- Para poner el video, nombre y boton en un solo elemento -->
+  <div class="box"> 
+    <div class="video">
+      <iframe width="240" height="300" src="https://www.youtube.com/embed/VKBLPuSZDkY?si=l-y3WYExCrW0SXtD" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="nombre">
+      <h2 style="color: red; ">BERTA <br>URRUTIA</h2>
+      <p>Pudo dedicar más tiempo para vender y hacer crecer su emprendimiento, gracias al Subsidio Contrata...</p>
+    </div>
+    <button class="boton default">VER TESTIMONIO</button>
+  </div>
+</div>
+<div class="testimonio"><!-- Para poner el video, nombre y boton en un solo elemento -->
+  <div class="box">
+    <div class="video">
+      <iframe width="240" height="300" src="https://www.youtube.com/embed/boet51ECu4I?si=LSFZo78UER2Uzuqk" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="nombre">
+      <h2 style="color: red; ">ERIKA<br>VALENCIA</h2>
+      <p>Recibió su IFE laboral y pudo completar su salario mensual</p>
+    </div>
+    <button class="boton default">VER TESTIMONIO</button>
+  </div>
+</div>
+  </div>
+  <!-- Dividir la pantalla en 2 secciones, una de noticias y otra de accesos generales -->
+  <div class="noticias">
+    <div class="half" style="background-color: #033866;"> <!-- Divide a la mitad -->
+      <div style="justify-content: space-evenly; display:flex; color: white;">
+        <a><span class="negrita-grande"><br><br>Noticias</span></a>
+        <a href="https://sence.gob.cl/personas/noticias/" style="color: white; margin-left: 300px;"><span class="negrita-grande"><br><br>Ver todas las noticias</span></a>
+      </div>
+      
+    </div>
+    <div class="half" style="background-color: #4b4a4a;"><!-- Divide a la mitad -->
+      <div style="display:flex; color: white;">
+        <a style="margin-left: 100px;"><span class="negrita-grande" ><br><br>Accesos Generales</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="noticias" style="height: 480px; width: 100%;">
+    <div class="half" style="background-color: white;">
+      <div style="justify-content: space-evenly; display:flex;">
+        <ul style="list-style: none;">
+          <li><div class="testimonio" style="background-color: white;height: 150px;"><!-- Reutilice css de seccion anterior para hacerla parte de noticias -->
+          <div class="box">
+            <div>
+              <img src="img/noticia1.png" style="height: 115px; width: 224px;" > <!-- Imagen de la noticia -->
+            </div>
+          </div>
+          <div class="box">
+            <div class="nombre">
+              <!-- Titular y link a la noticia -->
+              <h2 style="font-size: 14px;color: #033866; "><a href="https://sence.gob.cl/personas/discapacidad" target="_blank">¡Atencion! Sence abrió cursos de capacitación gratuita para personas con discapacidad en 12 regiones del país</a></h2>
+            </div>
+          </div>
+        
+          <div class="box">
+            <div class="nombre">
+              <h2 style="font-size: 14px; font-weight: normal;">Lun, 04 Abr, <br>11:56 am.</h2>
+            </div>
+            <a href="https://sence.gob.cl/personas/discapacidad" target="_blank"><button class="boton default">VER MAS</button></a> <!-- Boton para la noticia -->
+          </div>
+        </div></li>
+        <div class="testimonio" style="background-color: white; height: 150px">
+          <div class="box">
+            <div>
+              <img src="img/noticia2.png" style="height: 115px; width: 224px;"> <!-- Imagen de la noticia -->
+            </div>
+          </div>
+          <div class="box">
+            <div class="nombre">
+              <!-- Titular y link a la noticia -->
+              <h2 style="font-size: 14px;color: #033866; "><a href="https://sence.gob.cl/personas/noticias/cursos-gratuitos-para-obtener-licencia-de-conducir-a3-y-a5-en-6-regiones" target="_blank">Imperdible: Cursos gratuitos para obtener Livencia de Conducir A3 y A5 en Valdivia, Santiago y Antofagasta</a></h2>
+              <h3 style="font-size: 12px; color: #4b4a4a;"> La licencia de Conductor profesional, clase A-3, habilita para conducir taxis...</h3>
+              </div>
+          </div>
+        
+          <div class="box">
+            <div class="nombre">
+              <h2 style="font-size: 14px; font-weight: normal;">Lun, 04 Abr, <br> 09:07 am.</h2>
+            </div>
+            <a href="https://sence.gob.cl/personas/noticias/cursos-gratuitos-para-obtener-licencia-de-conducir-a3-y-a5-en-6-regiones" target="_blank"><button class="boton default">VER MAS</button></a> <!-- Boton para la noticia -->
+          </div>
+        </div></li>
+        <li><div class="testimonio" style="background-color: white; height: 150px ">
+          <div class="box">
+            <div>
+              <img src="img/noticia3.png" style="height: 115px; width: 224px;"><!-- Imagen de la noticia -->
+            </div>
+          </div>
+          <div class="box">
+            <div class="nombre">
+              <!-- Titular y link a la noticia -->
+              <h2 style="font-size: 14px;color: #033866; "><a href="https://sence.gob.cl/personas/noticias/despega-mipe-2022-cursos-sin-costo-para-trabajadores-duenos-representantes-legales-y-socios-de-pequenos-negocios#:~:text=Los%20cursos%20Despega%20Mipe%20ofrecen,las%20micro%20y%20pequeñas%20empresas.">Despega Mipe 2022: cursos sin costo para trabajadores, dueños, representantes legales y socios pequeños</h2></a>
+            </div>
+          </div>
+        
+          <div class="box">
+            <div class="nombre">
+              <h2 style="font-size: 14px; font-weight: normal;">Lun, 04 Abr, <br>09:47 am.</h2>
+            </div>
+            <a href="https://sence.gob.cl/personas/noticias/despega-mipe-2022-cursos-sin-costo-para-trabajadores-duenos-representantes-legales-y-socios-de-pequenos-negocios#:~:text=Los%20cursos%20Despega%20Mipe%20ofrecen,las%20micro%20y%20pequeñas%20empresas." target="_blank"><button class="boton default">VER MAS</button></a>
+          </div>
+        </div></li>
+      </div>
+    </ul>
+    </div>
+    <!-- Lista para el lado derecho-->
+    <div class="half" style="background-color: #5e5d5d;"><!-- Tambien dividido a la mitad -->
+      <div style="justify-content: space-between; display:flex; color: white;"><!-- en vez de tener mas css lo puse directo en html, el codigo se ve mas grande y desordenado -->
+        <ul style="list-style: none; margin-left: 50px; margin-top: 100px;"><!-- no estoy seguro si tengo css redundante -->          
+          <li><a href="http://sence.gob.cl/personas/cursos" style="margin-left: 100px;color: white; font-size: small;"target="_blank"><br>Postulaciones<br></a></li>
+          <li><a href="https://www.bne.cl/" style="margin-left: 100px;color: white;font-size: small;"target="_blank"><br>Contáctanos<br></a></li>
+          <li><a href="http://galeria-geo-sence-2021-1-2-geosence.hub.arcgis.com/" style="margin-left: 100px; color: white;font-size: small;"target="_blank"><br>GEO-SENCE<br></a></li>
+          <li><a href="http://sence.gob.cl/personas/registro-y-evaluacion-unificado-de-facilitadores-reuf" style="margin-left: 100px; color: white;font-size: small;"target="_blank"><br>Registro y Evaliación Unificado de Facilitadores, REUF<br></a></li>          
+          <li><a href="https://sence.gob.cl/personas/subsidio-al-empleo-joven" style="margin-left: 100px; color: white;font-size: small;"target="_blank"><br>Subsidio al Empleo Joven<br></a></li>
+          <li><a href="http://www.bonotrabajomujer.cl/" style="margin-left: 100px; color: white;font-size: small;"target="_blank"><br>Bono al trabajo de la Mujer<br></a></li>
+      </ul>
+    <div class="half" style="background-color: red; height: 480px;"><!-- Acá la otra mitad -->
+    <div style="justify-content: space-evenly; display:flex; color: white;">
+      <ul style="list-style: none;">
+        <li><a><img src="img/iconMoreJob.png" style="display: block; margin-left: auto; margin-right: auto;"></img></a></li>
+        <li><a href="https://cdn.sence.gob.cl/sites/default/files/balance_general_de_estados_financieros_del_sence_del_ano_2022.pdf" style="margin-left: 100px;color: white;"target="_blank"><br><br>Balance general de Sence: Estado financiero No auditado</a></li>
+        <li><a href="http://www.observatorionacional.cl/" style="margin-left: 100px;color: white;"target="_blank"><br><br>Conoce las ocupaciones a nivel nacional</a></li>
+        <li><a href="https://www.bne.cl/" style="margin-left: 100px;color: white;"target="_blank"><br><br>Bolsa Nacional De Empleo</a></li>
+        <li><a href="https://www.bne.cl/practicas-laborales/info" style="margin-left: 100px; color: white;"target="_blank"><br><br>Prácticas Técnico Profesionales</a></li>
+    </ul>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Lista con links de interes -->
+<div class="contenedor-enlaces" style="justify-content: space-evenly; margin: 3%">
+    <a href="https://www.portaltransparencia.cl/PortalPdT/ingreso-sai-v2?idOrg=undefined" target="_blank"><img src="img/solicitud.png"></a>
+    <a href="https://sence.gob.cl/catastro-nacional-de-tramites-2022" target="_blank"><img src="img/catastro.png"></a>
+    <a href="https://www.portaltransparencia.cl/PortalPdT/pdtta?codOrganismo=AL007" target="_blank"><img src="img/gobierno.png"></a>
+    <a href="https://www.empleospublicos.cl/" target="_blank"><img src="img/empleos_publicos.png"></a>
+    <a href="https://sence.gob.cl/personas/solicitud-de-audiencia-y-plataforma-ley-del-lobby" target="_blank"><img src="img/lobby.png"></a>
+</div>
+<footer><!-- para tener una franja de lado a lado lo designe footer -->
+  <div class="footer-left">
+    <img src="img/telephone.png"></img>
+    Call Center: Llame gratis al 800801030 <br>(lunes a viernes de 9 a 18 hrs.)
+  </div>
+  <div class="footer-center">
+    <img src="img/mail-footer.png"></img>
+    Ingrese su consulta al <br><span class="negrita-grande">Buzón Ciudadano</span>
+  </div>
+  <div class="footer-right">
+    <button class="footer-button" onclick="window.scrollTo(0, 0)">Ir arriba</button>
+  </div>
+</footer>
+
+<div class="bottom"><!-- Nueva seccion con fondo negro -->
+  <div class="half2" style="background-color: black;">
+    <div style="justify-content: space-between; display:flex; color: white;">
+      <ul style="list-style: none; font-size: small;">          
+        <li><a> <span class="negrita-grande">Instituciones <br>relacionadas: Previsión</span></a></li>
+        <li><a href="https://www.isl.gob.cl/" style="color: white;font-size: small;" target="_blank"><br>Instituto de Seguridad Laboral</a></li>
+        <li><a href="http://www.ips.gob.cl/servlet/internet/inicio" style="color: white;font-size: small;" target="_blank">IPS</a></li>
+        <li><a href="http://www.safp.cl/portal/institucional/594/w3-channel.html" style="color: white;font-size: small;" target="_blank">Superintendencia de Pensiones</a></li>          
+        <li><a href="http://www.suseso.gob.cl/OpenNet/asp/default.asp?boton=Hom" style="color: white;font-size: small;" target="_blank">SUSESO</a></li>
+        <li><a href="https://www.dipreca.cl/OpenNet/asp/default.asp?boton=Hom" style="color: white;font-size: small;" target="_blank">DIPRECA</a></li>
+        <li><a href="http://www.capredena.gob.cl/" style="color: white;font-size: small;" target="_blank">CAPRADENA</a></li>
+        <li><a href="https://www.chileatiende.gob.cl/" style="color: white;font-size: small;" target="_blank">ChileAtiende</a></li>
+        <li><a href="https://www.chilevalora.cl/" style="color: white;font-size: small;" target="_blank">ChileValora</a></li>
+      </ul>
+    </div>
+    <div style=" display:flex; justify-content: space-between; color: white;">
+        <ul style="list-style: none; font-size: small;">
+          <li><a> <span class="negrita-grande">Instituciones <br>relacionadas: Trabajo</span></a></li>
+          <li><a href="http://www.mintrab.gob.cl/" style="color: white;font-size: small;" target="_blank"><br>Ministerio del Trabajo y Previsión Social</a></li>
+          <li><a href="http://www.subtrab.trabajo.gob.cl/" style="color: white;font-size: small;" target="_blank">Subsecretaría del Trabajo</a></li>
+          <li><a href="https://www.dicrep.cl/" style="color: white;font-size: small;" target="_blank">DICREP</a></li>
+          <li><a href="http://www.dt.gob.cl/portal/1626/w3-channel.html" style="color: white;font-size: small;" target="_blank">Dirección del Trabajo</a></li>
+          <li><a href="http://www.integridadytransparencia.gob.cl/" style="color: white;font-size: small;" target="_blank">Comisión de Integridad Pública y Transparencia</a></li>
+          <li><a href="https://www.consejotransparencia.cl/" style="color: white;font-size: small;" target="_blank">Consejo para la Transparencia</a></li>
+          <li><a href="https://www.portaltransparencia.cl/PortalPdT/pdtta?codOrganismo=AL007" style="color: white;font-size: small;" target="_blank">Gobierno Transparente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="half2" style="background-color: black;"><!-- Tambien dividido a la mitad -->
+      <div class="image-container">
+        <img src="img/logo_sence_negro.png" alt="Logo SENCE Blanco" width="auto"></div>
+      <div class="texto-abajo" style="color: white; position: relative; margin-top: 100px;">Servicio Nacional de Capacitación y Empleo - Huérfanos 1273, Santiago - Desde Celular: *8010 y Red Fija: 4 4236 0155 (lunes a viernes, 09:00 a 18:00 hrs.).</div>
+      <div class="texto-abajo" style="color: #337ab7; position: relative; margin-top: 15px;">
+        <a href="https://sence.gob.cl/sence/politica-de-privacidad-sence">Política de Privacidad</a><!-- Con hipervinculo a la politica de privacida -->
+        |
+        <a href="https://sence.gob.cl/sence/mapa-del-sitio">Mapa del sitio</a><!-- Con hipervinculo al mapa del sitio-->
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</html>

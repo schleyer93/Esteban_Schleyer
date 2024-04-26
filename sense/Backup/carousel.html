@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* Estilos CSS anteriores omitidos para brevedad */
+
+/* Estilos para el carrusel */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel ul {
+  display: flex;
+  padding: 0;
+  transition: transform 0.5s ease;
+}
+
+.carousel li {
+  flex: 0 0 100%;
+  max-width: 100%;
+  list-style: none;
+}
+
+/* Estilos adicionales para las láminas */
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+<header>
+  <!-- Código HTML del encabezado omitido para brevedad -->
+</header>
+
+<div class="carousel">
+  <ul>
+    <li><img src="img/slide1.jpg" alt="Slide 1"></li>
+    <li><img src="img/slide2.jpg" alt="Slide 2"></li>
+    <li><img src="img/slide3.jpg" alt="Slide 3"></li>
+    <li><img src="img/slide4.jpg" alt="Slide 4"></li>
+    <li><img src="img/slide5.jpg" alt="Slide 5"></li>
+    <li><img src="img/slide6.jpg" alt="Slide 6"></li>
+    <li><img src="img/slide7.jpg" alt="Slide 7"></li>
+  </ul>
+</div>
+
+<div class="bottom-nav">
+  <!-- Código HTML del pie de página omitido para brevedad -->
+</div>
+
+<!-- Código HTML del resto del contenido omitido para brevedad -->
+
+<script>
+// Código JavaScript para el carrusel
+let carousel = document.querySelector('.carousel ul');
+let slides = document.querySelectorAll('.carousel li');
+let currentSlide = 0;
+let slideWidth = slides[0].clientWidth;
+
+function goToSlide(index) {
+  if (index < 0 || index >= slides.length) return;
+  carousel.style.transform = `translateX(-${slideWidth * index}px)`;
+  currentSlide = index;
+}
+
+// Automatic slideshow
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  goToSlide(currentSlide);
+}, 3000);
+</script>
+
+</body>
+</html>

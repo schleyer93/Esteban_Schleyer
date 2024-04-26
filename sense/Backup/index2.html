@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  background-color: red;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+}
+
+.topnav a {
+  color: white;
+  text-align: center;
+  padding: 12px 15px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: red;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.topnav a:hover {
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.social-search {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+    background-color: red;
+    padding: 5px 25px 5px 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+
+.social-search img {
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+}
+
+.bottom-nav {
+  font-size: 14px;
+  color: #337ab7;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bottom-nav button.menu-btn {
+  background-color: transparent;
+  color: #337ab7;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.bottom-nav button.menu-btn:hover {
+  transform: scale(1.1); 
+}
+
+.bottom-nav img {
+  width: 50px;
+  height: auto;
+}
+
+.horizontal-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px;
+}
+
+.horizontal-list li {
+  margin-right: 10px; 
+}
+
+.texto-abajo {
+  position: relative;
+  color: black;
+}
+
+.texto-abajo .texto {
+  position: absolute; 
+  bottom: -20px; 
+  left: 0; 
+}
+
+.contenedor-enlaces {
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-enlaces button {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-left: 2%;
+  transition: transform 0.3s; 
+  box-shadow: 0px 4px 8px #0000005b;
+}
+
+.contenedor-enlaces button:hover {
+  transform: scale(1.1); 
+}
+
+.contenedor-enlaces button img {
+  vertical-align: middle; 
+  margin-right: 5px; 
+}
+
+.negrita-grande {
+  text-align: center;
+  font-weight: bold; 
+  font-size: larger; 
+}
+
+.contenedor-cuadros {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+  }
+
+.cuadro {
+    width: 262px;
+    height: 81px;
+    background-color: white;
+    border-radius: 8px;
+    padding-bottom: 100px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px #0000005b;
+    text-align: center;
+  }
+
+.texto-grande {
+    color: #033866;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+.texto-pequeno {
+    color: #807e7e;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="topnav">
+    <a class="active" href="#Personas">Personas</a>
+    <a href="#Empresas">Empresas</a>
+    <a href="#Organismos">Organismos</a>
+    <a href="#Sobre Sence">Sobre Sence</a>
+    <div class="social-search">
+      <div class="search-bar">
+        <input placeholder=" " type="text" value size="30">
+        <a href="#"><img src="img/search.png"></a>
+      </div>
+      <div class="social">
+        <a href="#" title="Facebook" alt="fb" target="_blank"><img src="img/facebook.png"></a>
+        <a href="#" title="Instagram" alt="ig" target="_blank"><img src="img/instagram.png"></a>
+        <a href="#" title="YouTube" alt="yt" target="_blank"><img src="img/youtube.png"></a>
+        <a href="#" title="Twitter" alt="tw" target="_blank"><img src="img/twitter.png"></a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="bottom-nav">
+  <img src="img/sence.png" alt="Logo">
+  <div>
+    <button class="menu-btn"><img src="img/ayuda.png"></button>
+    <button class="menu-btn"><img src="img/login.png"></button>
+    <button class="menu-btn"><img src="img/menu.png"></button>
+  </div>
+</div>
+<div class="horizontal-list">
+  <button><img src="img/capacitacion.png"><br>Busco capacitación</button>
+  <button><img src="img/subisidio.png"><br>Busco Subsidio</button>
+  <button><img src="img/empleo.png"><br>Busco empleo</button>
+  <button><img src="img/certificar.png"><br>Certificar mi trabajo</button>
+</div>
+<div class="negrita-grande">
+  <p><span class="texto-azul"><br> Accesos rápidos</span></p>
+  <div class="contenedor-enlaces">    
+    <button><a href="#"><img src="img/cursos_en_lnea.png"></a><div class="texto-abajo">Cursos en linea</div></button>
+    <button><a href="#"><img src="img/subsidio_empleo_joven.png"></a><div class="texto-abajo">Subsidio Empleo Joven</div></button>
+    <button><a href="#"><img src="img/elige_mejor.png"></a><div class="texto-abajo">Elige mejor</div></button>
+    <button><a href="#"><img src="img/orientacicn_laboral.png"></a><div class="texto-abajo">Orientación laboral</div></button>
+    <button><a href="#"><img src="img/ife_laboral.png"></a><div class="texto-abajo">IFE laboral</div></button>
+    <button><a href="#"><img src="img/ferias_laborales_2.png"></a><div class="texto-abajo">Ferias Laborales</div></button>
+    <button><a href="#"><img src="img/bono_al_trabajo_mujer_0.png"></a><div class="texto-abajo">Bono al trabajo mujer</div></button>
+  </div>
+</div>
+<div class="negrita-grande">
+  <p><span class="texto-negro">NÚMEROS DE VERDAD,</span><span class="texto-azul"> APOYO DE VERDAD</span></p>
+  <p class="texto-pequeno">Datos del último año</p>
+</div>
+<div class="contenedor-cuadros">
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 681 mil</p></span>
+    <p class="texto-pequeno">Personas capacitadas</p>
+  </div>
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 96 mil</p></span>
+    <p class="texto-pequeno">Personas capacitadas on line</p>
+  </div>
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 773 mil</p></span>
+    <p class="texto-pequeno">Trabajadores subsidiados</p>
+  </div>
+  <div class="cuadro">
+    <span class="negrita-grande"><p class="texto-grande">+ 22 mil</p></span>
+    <p class="texto-pequeno">Personas orientadas laboralmente</p>
+  </div>
+</div>
+</html>
